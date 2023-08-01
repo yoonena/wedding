@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+.wedding-card__wrapper{
+    background-color: #f1f1f1;
+    font-family: 'Gowun Batang', serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Serif KR', serif;
+
+    .wedding-card{
+        margin: 0 auto;
+        max-width: 420px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+    }
+}
+
+.inner{
+    padding: 30px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+
+    &_date{
+        font-size: 50px;
+        font-weight: 900;
+        text-align: center;
+        font-family: 'Noto Serif KR', serif;
+    }
+
+    &_image{
+        padding: 30px;
+        background-color: #f1f1f1;
+    }
+}
+
+.contents{
+    color: #515151;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Gowun Batang', serif;
+
+    h6{
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Gowun Batang', serif;
+        text-align: center;
+    }
+    
+    &.contents_01{
+        position: relative;
+        padding: 80px 0;
+
+        &::before,
+        &::after{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            content: '';
+            width: 1px;
+            height: 80px;
+        }
+        &::before{
+            top: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+        }
+        &::after{
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+        }
+        .who{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+    
+            span{
+                &:last-of-type{
+                    position: relative;
+                    margin-left: 15px;
+                    padding-left: 15px;
+    
+                    &:last-of-type::before{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(0, -50%);
+                        content: '';
+                        width: 1px;
+                        height: 70%;
+                        background-color: #ddd;
+                    }
+                }
+            }
+        }
+    
+        .where{
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+    &.contents_02{
+        h6{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+
+    &.contents_04{
+        h6{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+
+    &:last-of-type{
+        padding-bottom: 30px;
+    }
+}
+
+.slider{
+
+    &-for{
+        position: relative;
+    }
+    &-nav{
+        position: relative;
+        width: calc(100% - 60px);
+        margin: 0 auto;
+        margin-top: 20px;
+
+        .slick-slide{
+            cursor: pointer;
+        }
+
+        .slick-arrow{
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 20px;
+            height: 20px;
+            font-size: 0;
+            background-image: url('/common/image/icon_arrow.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            cursor: pointer;
+            &.slick-prev {
+                left: -30px;
+                transform: rotate(180deg);
+            }
+            &.slick-next {
+                right: -30px;
+            }
+        }
+    }
+}
+
+.account_wrapper{
+    .account{
+        &:last-of-type{
+            margin-top: 10px;
+        }
+
+        &_title{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            font-size: 14px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+
+            .arrow{
+                width: 17px;
+                margin-top: 3px;
+                margin-left: 7px;
+
+                &.on{
+                    margin-top: -4px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    
+        &_list{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #f1f1f1;
+            display: none;
+
+            &.on{
+                display: flex;
+            }
+
+            li{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                border-bottom: 1px solid #f1f1f1;
+
+                &:last-of-type{
+                    border-bottom: 0;
+                }
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    font-size: 14px;
+                    font-family: 'Noto Sans KR', sans-serif;
+                }
+
+                button{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    font-family: 'Noto Sans KR', sans-serif;
+                    border: 1px solid rgba(0, 0, 0, 0.15);
+                    border-radius: 4px;
+
+                    svg{
+                        width: 12px;
+                        height: 12px;
+                        margin-right: 7px;
+                        vertical-align: middle;
+                        fill: #999;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.calendar-table__wrapper{
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    .calendar_table{
+        width: 100%;
+        margin: 0 auto;
+        font-size: .875rem;
+        font-family: 'Gowun Batang', serif;
+    
+        th, td{
+            text-align: center;
+        }
+
+        thead tr th{
+            padding-bottom: 20px;
+        }
+        tbody tr td{
+            padding-bottom: 10px;
+            &.d-day{
+                position: relative;
+
+                span{
+                    z-index: 2;
+                }
+
+                .pulsating-circle {
+                    position: absolute;
+                    top: 35%;
+                    left: 50%; 
+                    transform: translateX(-50%) translateY(-50%);
+                    width: 30px;
+                    height: 30px;
+                    color: #000;
+                    font-size: 30px;
+                    border-radius: 50%;
+                    z-index: -1;
+
+                    &:before {
+                        position: relative;
+                        content: '';
+                        display: block;
+                        width: 300%;
+                        height: 300%;
+                        margin-top: -100%;
+                        margin-left: -100%;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+                        background-color: rgba(216, 255, 0, 0.2);
+                        -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+                        animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+                    } 
+
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(216, 255, 0, 0.8);
+                        border-radius: 50%;
+                        -webkit-animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+                        animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+                    } 
+                } 
+
+                @-webkit-keyframes pulse-ring { 
+                    0% { transform: scale(0.33); } 
+                    80%, 100% { opacity: 0; } 
+                }
+                @keyframes pulse-ring { 
+                    0% { transform: scale(0.33); } 
+                    80%, 100% { opacity: 0; } 
+                }
+                @-webkit-keyframes pulse-dot { 
+                    0% { transform: scale(0.8); } 
+                    50% { transform: scale(1); } 
+                    100% { transform: scale(0.8); } 
+                }
+                @keyframes pulse-dot { 
+                    0% { transform: scale(0.8); } 
+                    50% { transform: scale(1); } 
+                    100% { transform: scale(0.8); } 
+                }
+            }
+        }
+    }
+}
+
+footer{
+    padding: 30px;
+    background-color: #f1f1f1;
+
+    ul{
+        margin-bottom: 15px;
+        li{
+            margin-bottom: 20px;
+
+            &:first-of-type{
+                margin-bottom: 30px;
+
+                button{
+                    padding-bottom: 0;
+                }
+            }
+
+            button{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                padding-bottom: 20px;
+                font-family: 'Gowun Batang', serif;
+                cursor: pointer;
+
+                &:hover,
+                &:active{
+                    text-decoration: underline 1px rgba(216, 255, 0, 1);
+                }
+
+                svg{
+                    width: 18px;
+                    height: 18px;
+                    margin: 0 10px 0 0;
+                }
+
+                span{
+                    position: absolute;
+                    left: 50%;
+                    bottom: 7px;
+                    transform: translate(-50%, 0);
+                    font-size: 9px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        padding-top: 30px;
+        font-size: 9px;
+        text-align: center;
+        font-family: 'Gowun Batang', serif;
+        border-top: 1px solid #ddd;
+
+        span{
+            background-color: rgba(216, 255, 0, 0.8);
+        }
+    }
+}
