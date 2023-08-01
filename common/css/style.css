@@ -98,7 +98,44 @@
   margin-bottom: 20px;
   font-size: 20px;
 }
-.contents.contents_04 h6 {
+.contents.contents_04 .maplestory_wedding {
+  padding: 30px;
+  border: 3px solid #f1f1f1;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.contents.contents_04 .maplestory_wedding_img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.contents.contents_04 .maplestory_wedding .maple_baby {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.contents.contents_04 .maplestory_wedding .maple_baby p {
+  flex: 1;
+  font-family: "Maplestory";
+}
+.contents.contents_04 .maplestory_wedding .maple_baby.hyeran p {
+  margin-right: 10px;
+  text-align: right;
+}
+.contents.contents_04 .maplestory_wedding .maple_baby.hyeran > img {
+  width: 30%;
+}
+.contents.contents_04 .maplestory_wedding .maple_baby.jongmin p {
+  margin-left: 10px;
+  text-align: left;
+}
+.contents.contents_04 .maplestory_wedding .maple_baby.jongmin > img {
+  width: 25%;
+}
+.contents.contents_05 h6 {
   margin-bottom: 20px;
   font-size: 20px;
 }
@@ -125,7 +162,7 @@
   width: 20px;
   height: 20px;
   font-size: 0;
-  background-image: url("/common/image/icon_arrow.png");
+  background-image: url("../image/icon_arrow.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
