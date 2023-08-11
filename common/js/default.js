@@ -54,3 +54,21 @@ function urlClip() {
     copyToClipboard(url);
     alert("링크가 복사되었습니다. 필요하신 곳에 붙여넣기 하세요!");
 }
+
+(function($) {
+    $('.thumbnail').magnificPopup({
+      type: 'image',
+      closeOnContentClick: true,
+      closeBtnInside: false,
+      gallery: { enabled: true },
+      fixedContentPos: true,
+      mainClass: 'mfp-no-margins mfp-with-zoom',
+      image: {
+        verticalFit: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300
+      }
+    });
+  })(jQuery);
