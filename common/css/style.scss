@@ -480,17 +480,8 @@ footer{
   .image-gallery {
     width: 100%;
     height: auto;
-    max-width: 700px;
-    background: #fff;
     overflow: auto;
-    padding: 5px;
-    margin: 50px auto 0;
-    @include prefix(( box-shadow: 0 3px 10px #ec3f3f));
-    
-    @media screen and (min-width: 800px) {
-      height: 500px;
-    }
-    
+
     &-items {
       position: relative;
       @include clearfix;
@@ -500,20 +491,13 @@ footer{
   .gallery-item {
     position: relative;
     float: left;
-    width: 50%;
-    padding: 8px;
+    width: 25%;
+    padding: 1px;
     margin: 0;
+
     cursor: pointer;
     text-align: center;
-    
-    @media screen and (min-width: 480px) {
-      width: 33.33333%;
-    }
-    
-    @media screen and (min-width: 680px) {
-      width: 25%;
-    }
-    
+
     @include prefix((user-select: none));
     > div {
       position: relative;
@@ -526,6 +510,7 @@ footer{
   }
   
   .thumbnail {
+    background-color: #f1f1f1;
     overflow: hidden;
     @include absolute-center;
 
@@ -544,7 +529,7 @@ footer{
       max-width: inherit;
       @include prefix(( transform: translate(-50%, -50%), transition: transform 150ms ease-in-out));
     }
-    
+
     span {
       position: absolute;
       top: 0;

@@ -365,17 +365,7 @@ footer .copyright span {
 .image-gallery {
   width: 100%;
   height: auto;
-  max-width: 700px;
-  background: #fff;
   overflow: auto;
-  padding: 5px;
-  margin: 50px auto 0;
-  box-shadow: 0 3px 10px #ec3f3f;
-}
-@media screen and (min-width: 800px) {
-  .image-gallery {
-    height: 500px;
-  }
 }
 .image-gallery-items {
   position: relative;
@@ -391,24 +381,14 @@ footer .copyright span {
 .gallery-item {
   position: relative;
   float: left;
-  width: 50%;
-  padding: 8px;
+  width: 25%;
+  padding: 1px;
   margin: 0;
   cursor: pointer;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-}
-@media screen and (min-width: 480px) {
-  .gallery-item {
-    width: 33.33333%;
-  }
-}
-@media screen and (min-width: 680px) {
-  .gallery-item {
-    width: 25%;
-  }
 }
 .gallery-item > div {
   position: relative;
@@ -420,6 +400,7 @@ footer .copyright span {
 }
 
 .thumbnail {
+  background-color: #f1f1f1;
   overflow: hidden;
   position: absolute;
   top: 0;
