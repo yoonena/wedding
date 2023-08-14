@@ -290,7 +290,10 @@
 
             <div class="contents contents_03" data-aos="fade-up" data-aos-delay="500">
                 <div class="inner">
-                    <h6>2023.11.11</h6>
+                    <h6>
+                        <img src="./common/image/subtext.png">
+                        <img src="./common/image/date.png">
+                    </h6>
                     <div class="calendar-table__wrapper">
                         <table class="calendar_table">
                             <thead>
@@ -361,17 +364,24 @@
 
             <div class="contents contents_04" data-aos="fade-up" data-aos-delay="500">
                 <div class="inner">
-                    <div class="maplestory_wedding">
-                        <div class="maplestory_wedding_img">
-                            <img src="./common/image/maplestory.png">
+                    <h6>오시는 길</h6>
+                    <img class="map" src="./common/image/map.png">
+                    <div class="box_wrapper">
+                        <div class="box">
+                            <b>주소</b>
+                            <span>경기도 수원시 팔달구 중부대로 181 (우만동)<br>수원 더 아리엘 6층 스카이가든홀</span>
                         </div>
-                        <div class="maple_baby jongmin">
-                            <img src="./common/image/maplestory2_right.png">
-                            <p>우리 게임속에서 결혼했는데<br>현실결혼도 하네!</p>
+                        <div class="box">
+                            <b>지하철</b>
+                            <span>[분당선 수원역] 4번출구 앞<br>· 720-2 / 730 / 83-1 / 10-2 / 10-5 / 37 / 46-1 / 9-2 / 11-1 → '수원고용센터, 동수원병원, 라마다호텔 앞' 하차 (약 4.4km, 20분 소요)</span>
                         </div>
-                        <div class="maple_baby hyeran">
-                            <p>ㅋㅋㅋ 갓생살자!</p>
-                            <img src="./common/image/maplestory1.png">
+                        <div class="box">
+                            <b>버스</b>
+                            <span>우만 신성아파트, 수원고용센터, 동수원병원, 라마다호텔 정류장 하차<br>· 일반 : 3 / 4-1 / 7 / 9-2 / 10 / 10-2 / 10-5 / 11-1 / 13-4 / 15-1 / 20 / 27 / 32 / 37 / 46-1 / 58 / 62 / 62-1 / 63 등</span>
+                        </div>
+                        <div class="box">
+                            <b>자가용</b>
+                            <span>네비게이션 이용 시 : '수원 더아리엘' 또는<br>'경기도 수원시 팔달구 중부대로 181', '우만동 147-7' 입력</span>
                         </div>
                     </div>
                 </div>
@@ -430,6 +440,31 @@
                     </div>
                 </div>
             </div><!-- /contents_05  -->
+
+
+            <div class="button_wrapper">
+                <button id="showEasterEgg" class="easter_egg_btn">
+                    <img src="./common/image/easterEgg.png">
+                </button>
+            </div>
+
+            <div id="easterEggContainer" class="contents easter_egg" data-aos="fade-up" data-aos-delay="500">
+                <div class="inner">
+                    <div class="maplestory_wedding">
+                        <div class="maplestory_wedding_img">
+                            <img src="./common/image/maplestory.png">
+                        </div>
+                        <div class="maple_baby jongmin">
+                            <img src="./common/image/maplestory2_right.png">
+                            <p>우리 게임속에서 결혼했는데<br>현실결혼도 하네!</p>
+                        </div>
+                        <div class="maple_baby hyeran">
+                            <p>ㅋㅋㅋ 갓생살자!</p>
+                            <img src="./common/image/maplestory1.png">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /easter_egg  -->
 
             <footer>
                 <ul>
@@ -490,6 +525,13 @@
             dots: false,
             centerMode: true,
             focusOnSelect: true
+        });
+
+        $(document).ready(function() {
+            $("#showEasterEgg").click(function() {
+                $("#easterEggContainer").fadeIn();
+                $("#showEasterEgg").hide();
+            });
         });
     </script>
 </body>

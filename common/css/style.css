@@ -46,7 +46,7 @@
 }
 .contents h6 {
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   font-family: "Gowun Batang", serif;
   text-align: center;
@@ -98,46 +98,102 @@
   margin-bottom: 20px;
   font-size: 20px;
 }
-.contents.contents_04 .maplestory_wedding {
+.contents.contents_03 h6 img:first-of-type {
+  width: 40%;
+  margin-bottom: 10px;
+}
+.contents.contents_03 h6 img:last-of-type {
+  width: 60%;
+}
+.contents.contents_04 {
+  position: relative;
+}
+.contents.contents_04::after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #f1f1f1;
+}
+.contents.contents_04 .map {
+  opacity: 0.7;
+}
+.contents.contents_04 .box_wrapper {
+  position: relative;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+.contents.contents_04 .box_wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: #f1f1f1;
+}
+.contents.contents_04 .box_wrapper .box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 12px;
+}
+.contents.contents_04 .box_wrapper .box b {
+  display: inline-block;
+  width: 40px;
+  font-weight: 900;
+}
+.contents.contents_04 .box_wrapper .box span {
+  flex: 1;
+}
+.contents.contents_05 h6 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.contents.easter_egg {
+  display: none;
+}
+.contents.easter_egg .maplestory_wedding {
   padding: 30px;
   border: 3px solid #f1f1f1;
   border-radius: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.contents.contents_04 .maplestory_wedding_img {
+.contents.easter_egg .maplestory_wedding_img {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
-.contents.contents_04 .maplestory_wedding .maple_baby {
+.contents.easter_egg .maplestory_wedding .maple_baby {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.contents.contents_04 .maplestory_wedding .maple_baby p {
+.contents.easter_egg .maplestory_wedding .maple_baby p {
   flex: 1;
   font-family: "Maplestory";
 }
-.contents.contents_04 .maplestory_wedding .maple_baby.hyeran p {
+.contents.easter_egg .maplestory_wedding .maple_baby.hyeran p {
   margin-right: 10px;
   text-align: right;
 }
-.contents.contents_04 .maplestory_wedding .maple_baby.hyeran > img {
+.contents.easter_egg .maplestory_wedding .maple_baby.hyeran > img {
   width: 30%;
 }
-.contents.contents_04 .maplestory_wedding .maple_baby.jongmin p {
+.contents.easter_egg .maplestory_wedding .maple_baby.jongmin p {
   margin-left: 10px;
   text-align: left;
 }
-.contents.contents_04 .maplestory_wedding .maple_baby.jongmin > img {
+.contents.easter_egg .maplestory_wedding .maple_baby.jongmin > img {
   width: 25%;
-}
-.contents.contents_05 h6 {
-  margin-bottom: 20px;
-  font-size: 20px;
 }
 .contents:last-of-type {
   padding-bottom: 30px;
@@ -294,6 +350,18 @@
   100% {
     transform: scale(0.8);
   }
+}
+
+.button_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.button_wrapper .easter_egg_btn {
+  width: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 footer {
@@ -476,6 +544,35 @@ footer .copyright span {
   height: 100%;
   vertical-align: middle;
 }
+.mfp-container-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  padding: 0;
+  color: #fff;
+  background: none;
+  border: none;
+  font-style: normal;
+  font-size: 0;
+  background-image: url("../image/btn_close_mg_popup.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.mfp-container-close:hover, .mfp-container-close:focus {
+  opacity: 1;
+  cursor: pointer;
+  outline: 0;
+}
+.mfp-container-close:active {
+  top: 1px;
+}
 .mfp-content {
   position: relative;
   display: inline-block;
@@ -492,22 +589,25 @@ footer .copyright span {
   display: none !important;
 }
 .mfp-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   width: 44px;
   height: 44px;
   line-height: 44px;
-  position: absolute;
-  right: 0;
-  top: 0;
   text-decoration: none;
   text-align: center;
   opacity: 0.65;
-  padding: 0 0 18px 10px;
+  padding: 0;
   color: #fff;
   background: none;
   border: none;
   font-style: normal;
-  font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
+  font-size: 0;
+  background-image: url("../image/btn_close_mg_popup.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
@@ -564,6 +664,9 @@ footer .copyright span {
 .mfp-figure figure {
   margin: 0;
 }
+.mfp-figure .mfp-close {
+  background-image: initial;
+}
 .mfp-bottom-bar {
   margin-top: -36px;
   position: absolute;
@@ -586,6 +689,7 @@ footer .copyright span {
   color: #f3f3f3;
   font-size: 12px;
   line-height: 18px;
+  font-family: "Gowun Batang", serif;
   white-space: nowrap;
 }
 .mfp-arrow {
