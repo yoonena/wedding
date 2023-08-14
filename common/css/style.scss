@@ -143,7 +143,52 @@
         }
 
 		.map{
-			opacity: 0.7;
+
+			img{
+				opacity: 0.7;
+			}
+			
+			.pulsating-circle {
+				position: absolute;
+				top: 36.4%;
+				left: 47.3%;
+				transform: translateX(-50%) translateY(-50%);
+				width: 30px;
+				height: 30px;
+				color: #000;
+				font-size: 30px;
+				border-radius: 50%;
+				z-index: -1;
+
+				&:before {
+					position: relative;
+					content: '';
+					display: block;
+					width: 300%;
+					height: 300%;
+					margin-top: -100%;
+					margin-left: -100%;
+					box-sizing: border-box;
+					border-radius: 50%;
+					background-color: rgba(216, 255, 0, 0.2);
+					-webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+					animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+				} 
+
+				&:after {
+					position: absolute;
+					top: 0;
+					left: 0;
+					content: '';
+					display: block;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(216, 255, 0, 0.8);
+					border-radius: 50%;
+					-webkit-animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+					animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+				} 
+			} 
 		}
 
 		.box_wrapper{
