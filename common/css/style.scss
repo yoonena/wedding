@@ -107,6 +107,29 @@
                 text-align: center;
             }
         }
+
+		.invite{
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 0px;
+			padding-top: 30px;
+			line-height: 2;
+			font-size: 12px;
+			text-align: center;
+
+			&::before{
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				content: '';
+				width: 4px;
+				height: 4px;
+				background-color: #ddd;
+				border-radius: 50%;
+			}
+
+		}
     }
 
     &.contents_02{
@@ -143,6 +166,7 @@
         }
 
 		.map{
+			position: relative;
 
 			img{
 				opacity: 0.7;
@@ -150,8 +174,8 @@
 			
 			.pulsating-circle {
 				position: absolute;
-				top: 36.4%;
-				left: 47.3%;
+				top: 66%;
+				left: 46.7%;
 				transform: translateX(-50%) translateY(-50%);
 				width: 30px;
 				height: 30px;

@@ -94,6 +94,26 @@
 .contents.contents_01 .where p {
   text-align: center;
 }
+.contents.contents_01 .invite {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  line-height: 2;
+  font-size: 12px;
+  text-align: center;
+}
+.contents.contents_01 .invite::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
 .contents.contents_02 h6 {
   margin-bottom: 20px;
   font-size: 20px;
@@ -118,13 +138,16 @@
   height: 1px;
   background-color: #f1f1f1;
 }
+.contents.contents_04 .map {
+  position: relative;
+}
 .contents.contents_04 .map img {
   opacity: 0.7;
 }
 .contents.contents_04 .map .pulsating-circle {
   position: absolute;
-  top: 36.4%;
-  left: 47.3%;
+  top: 66%;
+  left: 46.7%;
   transform: translateX(-50%) translateY(-50%);
   width: 30px;
   height: 30px;
