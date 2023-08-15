@@ -29,6 +29,7 @@
         position: relative;
         width: 50%;
         margin: 0 auto;
+		margin-top: -30px;
         font-size: 50px;
         font-weight: 900;
         text-align: center;
@@ -37,8 +38,19 @@
     }
 
     &_image{
-        margin-top: -70px;
-        z-index: 1;
+		position: relative;
+        // margin-top: -70px;
+        // z-index: 1;
+
+		&::before{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			content: '';
+			width: 100%;
+			height: 50%;
+			background: linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0.5));
+		}
     }
 }
 
