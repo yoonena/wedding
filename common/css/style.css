@@ -23,6 +23,9 @@
   align-items: center;
   justify-content: center;
 }
+.main .inner {
+  padding-bottom: 17px;
+}
 .main_date {
   position: relative;
   width: 50%;
@@ -126,17 +129,6 @@
 .contents.contents_02 {
   position: relative;
 }
-.contents.contents_02::before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  content: "";
-  width: 3px;
-  height: 3px;
-  background-color: #ddd;
-  border-radius: 50%;
-}
 .contents.contents_02::after {
   position: absolute;
   left: 50%;
@@ -224,7 +216,7 @@
   margin-left: -100%;
   box-sizing: border-box;
   border-radius: 50%;
-  background-color: rgba(216, 255, 0, 0.2);
+  background-color: rgba(255, 228, 250, 0.5);
   animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 .contents.contents_05 .map .pulsating-circle:after {
@@ -235,7 +227,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(216, 255, 0, 0.8);
+  background-color: #ffe4fa;
   border-radius: 50%;
   animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
 }
@@ -435,7 +427,7 @@
   margin-left: -100%;
   box-sizing: border-box;
   border-radius: 50%;
-  background-color: rgba(216, 255, 0, 0.2);
+  background-color: rgba(255, 228, 250, 0.5);
   animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 .calendar-table__wrapper .calendar_table tbody tr td.d-day .pulsating-circle:after {
@@ -446,7 +438,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(216, 255, 0, 0.8);
+  background-color: #ffe4fa;
   border-radius: 50%;
   animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
 }
@@ -511,8 +503,8 @@ footer ul li button {
   cursor: pointer;
 }
 footer ul li button:hover, footer ul li button:active {
-  -webkit-text-decoration: underline 1px rgb(216, 255, 0);
-          text-decoration: underline 1px rgb(216, 255, 0);
+  -webkit-text-decoration: underline 1px #ffe4fa;
+          text-decoration: underline 1px #ffe4fa;
 }
 footer ul li button svg {
   width: 18px;
