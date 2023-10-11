@@ -829,13 +829,25 @@ footer{
       vertical-align: middle;
     }
 
+    &::after{
+      position: absolute;
+      top: 16px;
+      left: 8px;
+      content: '사진 손으로 톡 톡 치시면 다음 장으로 넘어갑니다 :) ';
+      color: #fff;
+      font-size: 9px;
+      font-family: 'Noto Serif KR', serif;
+      z-index: 5;
+      opacity: 0.6;
+    }
+
 	&-close {
 		position: absolute;
 		top: 10px;
 		right: 10px;
-		width: 44px;
-		height: 44px;
-		line-height: 44px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
 		text-decoration: none;
 		text-align: center;
 		opacity: 0.65;
@@ -884,9 +896,9 @@ footer{
 	position: absolute;
 	top: 10px;
     right: 10px;
-    width: 44px;
-    height: 44px;
-    line-height: 44px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
     text-decoration: none;
     text-align: center;
     opacity: 0.65;
@@ -932,7 +944,6 @@ footer{
     display: block;
     line-height: 0;
     box-sizing: border-box;
-    padding: 40px 0;
     margin: 0 auto;
   }
 
@@ -964,9 +975,10 @@ footer{
       margin: 0;
     }
 
-	.mfp-close{
-		background-image: initial;
-	}
+    .mfp-close{
+      background-image: initial;
+      display: none;
+    }
   }
 
   &-bottom-bar {
