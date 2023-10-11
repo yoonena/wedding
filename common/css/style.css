@@ -806,8 +806,8 @@ footer .copyright span {
 }
 .mfp-counter {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 4px;
   color: #f3f3f3;
   font-size: 12px;
   line-height: 18px;
