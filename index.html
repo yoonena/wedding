@@ -604,9 +604,6 @@
         /* Define a variável que dá swipe no lightbox */
         var magnificPopup = $.magnificPopup.instance;
 
-        /* Carrega a função quando clica no lightbox (senão não pega a classe utilizada) */
-        $(".open-popup-link").click(function(e) {
-
             /* Espera carregar o lightbox */
             setTimeout(function() {
                 /* Swipe para a esquerda - Próximo */
@@ -623,9 +620,17 @@
                 },
                 });
             }, 500);
-        });
 
         }).call(this);
+
+        $(function() {
+            $(".mfp-container").swipe( {
+                //Generic swipe handler for all directions
+                swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                $(this).text("You swiped " + direction );  
+                }
+            });
+        });
     </script>
 </body>
 </html>
