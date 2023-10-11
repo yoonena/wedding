@@ -863,15 +863,15 @@ footer{
 		background-position: center;
 		background-size: contain;
 	
-		&:hover,
-		&:focus {
-		  opacity: 1;
-		  cursor: pointer;
-		  outline: 0;
-		}
-		&:active {
-		  top: 1px;
-		}
+      &:hover,
+      &:focus {
+        opacity: 1;
+        cursor: pointer;
+        outline: 0;
+      }
+      &:active {
+        top: 1px;
+      }
 	  }
   }
 
